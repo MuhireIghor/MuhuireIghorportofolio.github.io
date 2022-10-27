@@ -25,14 +25,14 @@ const Header: FC = () => {
                                     <div className="text- text-md text-white"><TypewriterComponent options={{loop:true,delay:500,autoStart:true,strings:[intro.intro]}} /> </div>
                                     <div className="text-xl font-bold text-white "><TypewriterComponent options={{loop:true,delay:300,autoStart:true,strings:[intro.name]}} /></div>
                                     <div className="text-sm text-[gray]"><TypewriterComponent options={{loop:true,autoStart:true,strings:[intro.text1]}} /></div>
-                                    <div className="text-sm text-[gray] max-w-[400px]"><TypewriterComponent options={{autoStart:true,strings:[intro.text2]}} /></div>
+                                    <div className="text-sm text-[gray] max-w-[400px]"><TypewriterComponent options={{loop:true, autoStart:true,strings:[intro.text2]}} /></div>
                                 </div>
 
                                 <div className="flex flex-col">
                                     <div className=" bg-white/10 h-[12rem] blur-[5px] flex flex-col">
 
                                     </div>
-                                    <div className="flex flex-col p-8 border-xl absolute z-20 text-[gray] "><TypewriterComponent options={{autoStart:true,strings:[quote.text2]}} /> </div>
+                                    <div className="flex flex-col p-8 border-xl absolute z-20 text-[gray] "><TypewriterComponent options={{loop:true,autoStart:true,strings:[quote.text2]}} /> </div>
                                 </div>
                             </>
                         )

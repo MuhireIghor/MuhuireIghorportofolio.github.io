@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css';
 import Header from '../components/Header';
 import { NextPage } from 'next';
 import Links from '../components/Links';
+import Journey from '../components/Journey';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
 <div className='bg-[#092027]'>
 <Header />
 <Links />
+<Journey />
 </div>
 
 
