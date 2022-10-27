@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import TypewriterComponent from "typewriter-effect";
 import Image from "next/image";
 import { FC } from "react";
 import { icons } from "../Data/icons";
@@ -13,6 +14,7 @@ const Header: FC = () => {
                     ))
                 }
             </div>
+            
             <div className="flex flex-col  w-3/6 h-screen relative gap-8 left-12 ">
                 {
                     blocks.map(({ intro, quote }) => {
@@ -20,17 +22,17 @@ const Header: FC = () => {
                             <>
                                 <div className="bg-white/10 h-[18rem] blur-[5px]  rounded-[12px]  ">  </div>
                                 <div className="flex flex-col p-2 border-xl   h-1/4 left-4  top-14 right-4 absolute z-20 gap-4  ">
-                                    <div className="text- text-md text-white">{intro.intro}</div>
-                                    <div className="text-xl font-bold text-white ">{intro.name}</div>
-                                    <div className="text-sm text-[gray]">{intro.text1}</div>
-                                    <div className="text-sm text-[gray] max-w-[400px]">{intro.text2}</div>
+                                    <div className="text- text-md text-white"><TypewriterComponent options={{loop:true,delay:500,autoStart:true,strings:[intro.intro]}} /> </div>
+                                    <div className="text-xl font-bold text-white "><TypewriterComponent options={{loop:true,delay:300,autoStart:true,strings:[intro.name]}} /></div>
+                                    <div className="text-sm text-[gray]"><TypewriterComponent options={{loop:true,autoStart:true,strings:[intro.text1]}} /></div>
+                                    <div className="text-sm text-[gray] max-w-[400px]"><TypewriterComponent options={{autoStart:true,strings:[intro.text2]}} /></div>
                                 </div>
 
                                 <div className="flex flex-col">
                                     <div className=" bg-white/10 h-[12rem] blur-[5px] flex flex-col">
 
                                     </div>
-                                    <div className="flex flex-col p-8 border-xl absolute z-20 text-[gray] ">{quote.text2} </div>
+                                    <div className="flex flex-col p-8 border-xl absolute z-20 text-[gray] "><TypewriterComponent options={{autoStart:true,strings:[quote.text2]}} /> </div>
                                 </div>
                             </>
                         )
