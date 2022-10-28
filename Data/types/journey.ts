@@ -1,6 +1,5 @@
 interface achievement{
 
-    title?:string;
     year:number;
     data:string[];
 

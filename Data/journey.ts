@@ -2,7 +2,6 @@ import {journey } from "./types/journey";
 export const data:journey[] = [
 {
     achievement:{
-        title:"My  coding jurney  until now 👌😉!",
         year:2022,
         data:["Front-end developer - AB PAGE","Fullstack developer - Memory","Backend-Developer - RENT HOUSEMATES RWANDA"]
     },

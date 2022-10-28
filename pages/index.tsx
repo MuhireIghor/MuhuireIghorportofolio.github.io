@@ -5,7 +5,8 @@ import Header from '../components/Header';
 import { NextPage } from 'next';
 import Links from '../components/Links';
 import Journey from '../components/Journey';
-
+import Projects from '../components/Projects';
+import Contacts from '../components/Contacts';
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -18,6 +19,8 @@ export default function Home() {
 <Header />
 <Links />
 <Journey />
+<Projects />
+<Contacts />
 </div>
 
 
