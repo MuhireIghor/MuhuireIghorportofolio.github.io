@@ -10,11 +10,14 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.7.0",
+    "@fullpage/react-fullpage": "^0.1.28",
     "dotenv": "^16.0.3",
+    "flat-carousel": "^0.0.1",
     "next": "12.3.1",
     "nodemailer": "^6.8.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-fullpage": "^0.1.19",
     "touch-cli": "^0.0.1",
     "typewriter-effect": "^2.19.0"
   },

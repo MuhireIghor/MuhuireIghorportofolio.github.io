@@ -8,7 +8,7 @@ export const data:journey[] = [
 
     skills:{
         field:"Website development",
-        icons:[ "react.png","node.png","php.png","html.png","css.png","tailwind.png","sass.png","angular.png","nest.png","next.png" ]
+        icons:[ "react.png","node.png","php.png","html.png","css.png","tailwind.png","sass2.png","angular2.png","nest2.png","next.png" ]
 
     }
 

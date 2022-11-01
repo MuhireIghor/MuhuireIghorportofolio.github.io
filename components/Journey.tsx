@@ -3,7 +3,7 @@ import Link from "next/link";
 import { data } from "../Data/journey";
 const Journey = () => {
     return (
-        <div className="flex flex-col gap-8 h-[36rem] ">
+        <div className="flex flex-col gap-8 h-[36rem] " id="Journey">
             <div className="flex flex-col items-center justify-center text-white text-xl">
                 My  coding jurney  until now 👌😉!
             </div>

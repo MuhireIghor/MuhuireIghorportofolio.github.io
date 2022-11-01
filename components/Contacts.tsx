@@ -1,4 +1,5 @@
 import React,{useState,useEffect,useRef} from 'react';
+import Link from 'next/link';
 import { data } from "../Data/contacts";
 import Image from "next/image";
 import nodemailer from 'nodemailer';
@@ -67,33 +68,35 @@ const Contacts = () => {
 
 
     return (
-        <div className="flex flex-col  gap-6  justify-start">
+        <div className="flex flex-col  gap-6  justify-start" id='Contacts'>
             <div className="flex flex-col items-center justify-center text-white text-xl ">
                 Contact me👌😉!
             </div>
             <div className="flex flex-row justify-between">
-                <div className="flex flex-col  items-center ">
+                <div className="flex flex-col basis-1/3 ml-12 space-y-4 h-full ">
                     {data.map((cont, index) => {
                         return (
                             <>
-                                <div className="flex  ">
+                                <div key={index} className="flex space-x-4">
+                                
                                     <div>
                                         <Image src={`/images/${cont.iconUrl}`} width={20} height={20} />
                                     </div>
-                                    <div className="text-white text-sm font-light">{cont.descValue}</div>
+                                    {index ===1?(<div className="text-white text-sm font-light hover:text-[blue]"><Link href="https://google.com/mail/muhireighor123@gmail.com">{cont.descValue}</Link></div>):(<div className="text-white text-sm font-light hover:text-[blue]">{cont.descValue}</div>)}
+                                
                                 </div>
                             </>
                         )
                     })}
                 </div>
-                <form ref={form} className="flex flex-col gap-4" onSubmit={handleSubmit}>
-                    <div className="bg-white/30 w-[958px] h-[78px] rounded-[12px] flex items-center justify-start pl-12 ">
-                        <input type={'text'} name="user_name" placeholder="Name eg:John Doe" className="placeholder-[gray] border-none  outline-none bg-white/10 " value={name} onChange = {handleName} />
+                <form ref={form} className="flex flex-col gap-4 basis-2/3" onSubmit={handleSubmit}>
+                    <div className="bg-white/10 w-[958px] h-[78px] rounded-[12px] flex items-center justify-start pl-12 ">
+                        <input type={'text'} name="user_name" placeholder="Name eg:John Doe" className="placeholder-[gray]  outline-none bg-transparent text-[gray] " value={name} onChange = {handleName} />
                     </div>
-                    <div className="bg-white/30 w-[958px] h-[78px] rounded-[12px] flex items-center justify-start pl-12 ">
-                        <input type={'text'} name="user_email" placeholder="Email : e.g john@doe.com" className="placeholder-[gray] border-none  outline-none bg-white/10 " value={email} onChange = {handleEmail} />
+                    <div className="bg-white/10 w-[958px] h-[78px] rounded-[12px] flex items-center justify-start pl-12 ">
+                        <input type={'text'} name="user_email" placeholder="Email : e.g john@doe.com" className="placeholder-[gray] border-none bg-transparent  outline-none text-[gray]" value={email} onChange = {handleEmail} />
                     </div>
-                        <textarea placeholder="Message" name='message' className="bg-white/10 rounded-[12px] p-5 resize-x " value={message} onChange={handleMessage}></textarea>
+                        <textarea placeholder="Message" name='message' className="placeholder-[gray] bg-white/10 rounded-[12px] p-5 pl-12 resize-x flex items-center justify-start" value={message} onChange={handleMessage}></textarea>
                     <button className="bg-[#0364BD] h-[75px] text-white rounded-[12px] ">Send Message</button>                
                 </form>
             </div>

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 const Projects = ()=>{
     return( 
-        <div className='flex flex-col gap-12 mt-12 h-[36rem] '>
+        <div className='flex flex-col gap-12 mt-12 h-[36rem] ' id='Projects'>
             <div className='flex flex-col items-center justify-center text-white text-xl'>Projects I've worked on so far👌😉!</div>
             <div className='flex items-center justify-center'>
                 {data.map((project,index)=>{
