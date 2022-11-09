@@ -80,7 +80,7 @@ const Contacts = () => {
                                 <div key={index} className="flex space-x-4">
                                 
                                     <div>
-                                        <Image src={`/images/${cont.iconUrl}`} width={20} height={20} />
+                                        <Image src={`/images/${cont.iconUrl}`} width={20} height={20} alt={cont.iconUrl} />
                                     </div>
                                     {index ===1?(<div className="text-white text-sm font-light hover:text-[blue]"><Link href="https://google.com/mail/muhireighor123@gmail.com">{cont.descValue}</Link></div>):(<div className="text-white text-sm font-light hover:text-[blue]">{cont.descValue}</div>)}
                                 

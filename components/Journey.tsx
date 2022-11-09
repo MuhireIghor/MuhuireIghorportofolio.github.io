@@ -9,18 +9,18 @@ const Journey = () => {
             </div>
             <div className="flex justify-center  ">
                 <div className="bg-white/30 flex flex-col h-auto mx-4  p-12 rounded-[12px] ">
-                    {data.map(({ achievement, skills }) => {
+                    {data.map(({ achievement, skills },index) => {
                         return (
 
-                            <div className="flex flex-row">
+                            <div  key={index} className="flex flex-row">
                                 <div className="flex flex-col gap-1 ">
                                     <div className="text-[gray]">{achievement.year}</div>
                                     <div className="h-16 w-1 ml-[12px] bg-[gray] "></div>
                                 </div>
                                 <div className="flex flex-col ml-6 mt-4">
-                                    {achievement.data.map((achv) => {
+                                    {achievement.data.map((achv,index) => {
                                         return (
-                                            <div className="text-white ">{achv}</div>
+                                            <div key={index} className="text-white ">{achv}</div>
                                         )
                                     })}
 
@@ -33,14 +33,14 @@ const Journey = () => {
                 </div>
                 <div className="flex flex-col bg-white/30 h-auto rounded-[12px] p-8 ">
                     <div className="flex flex-col gap-4 ">
-                        {data.map(({ achievement, skills }) => {
+                        {data.map(({ achievement, skills },index) => {
                             return (
                                 <>
                                     <div className="text-white font-semibold">{skills.field}</div>
                                     <div className="flex ">
-                                        {skills.icons.map((icon) => {
+                                        {skills.icons.map((icon,index) => {
                                             return (
-                                                <Image src={`/images/${icon}`} width={40} height={40} />
+                                                <Image  key={index} src={`/images/${icon}`} width={40} height={40} alt={icon} />
                                             )
                                         })}
                                     </div>

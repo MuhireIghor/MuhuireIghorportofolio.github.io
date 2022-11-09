@@ -5,15 +5,15 @@ import Link from 'next/link';
 const Projects = ()=>{
     return( 
         <div className='flex flex-col gap-12 mt-12 h-[36rem] ' id='Projects'>
-            <div className='flex flex-col items-center justify-center text-white text-xl'>Projects I've worked on so far👌😉!</div>
+            <div className='flex flex-col items-center justify-center text-white text-xl'>Projects I&apos;ve worked on so far👌😉!</div>
             <div className='flex items-center justify-center'>
                 {data.map((project,index)=>{
                     return(
-                        <div className='flex flex-col bg-white/30 ml-4 rounded-[12px] p-6 w-[351px] h-[405px] '>
+                        <div key={index} className='flex flex-col bg-white/30 ml-4 rounded-[12px] p-6 w-[351px] h-[405px] '>
                             <div className='flex items-center justify-center '>
                             <Link href={`${project.projectLink}`} >
                                 <a>
-                                    <Image src={`${project.imgUrl}`} width={400} height={400} />
+                                    <Image alt={project.projectDescription} src={`${project.imgUrl}`} width={400} height={400} />
                                 </a> 
                                 </Link>
                             </div>
