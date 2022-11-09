@@ -73,7 +73,7 @@ const Header2: FC = () => {
                         </div>
                     </div>
                     <div className="basis-3/4 w-40vw ">
-                        <Image src='/images/bg.jpg ' className='rounded-full' width={400} height={380} alt={"image"} />
+                        <Image src='/images/bg.jpg' className='rounded-full' width={400} height={380} alt={"image"} />
                     </div>
 
                 </div>

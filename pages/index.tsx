@@ -7,7 +7,7 @@ import Links from '../components/Links';
 import Journey from '../components/Journey';
 import Projects from '../components/Projects';
 import Contacts from '../components/Contacts';
-import {Section,SectionsContainer,Navbar,Header} from "react-fullpage";
+import {Section,SectionsContainer,Navbar,Header,Footer} from "react-fullpage";
 
 export default function Home() {
   let options = {
@@ -33,9 +33,6 @@ export default function Home() {
   </Section>
   <SectionsContainer {...options}>
     <Section>
-<Links key={1}/>
-    </Section>
-    <Section>
     <Journey key={2} />
     </Section>
     <Section>
@@ -45,6 +42,9 @@ export default function Home() {
 <Contacts key={4}/>
     </Section>
   </SectionsContainer>
+    <Footer>
+<Links key={1}/>
+    </Footer>
 
 
     
